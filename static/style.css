@@ -1,40 +1,35 @@
-/* General body and layout */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #e7f6f2;
+    background: #f0f8ff;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Navigation header */
 .navbar {
     background-color: #0077b6;
     padding: 15px 30px;
     color: white;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Main container */
 .container {
     max-width: 800px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 30px 40px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Heading styles */
-h1, h2, h3 {
-    text-align: center;
+h1 {
     color: #0077b6;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -42,24 +37,20 @@ form {
 }
 
 input[type="text"] {
-    padding: 14px;
-    width: 90%;
-    max-width: 600px;
+    padding: 12px;
+    width: 80%;
     margin-bottom: 20px;
     font-size: 16px;
-    border: 1px solid #bbb;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
 }
 
-/* Button styling */
 button {
     background-color: #0077b6;
-    color: #fff;
+    color: white;
     border: none;
-    padding: 14px 28px;
+    padding: 12px 20px;
     font-size: 16px;
-    font-weight: 500;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -69,21 +60,19 @@ button:hover {
     background-color: #005f8e;
 }
 
-/* Result container */
 .result {
     margin-top: 30px;
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 10px 0 5px 0; /* reduced bottom margin */
 }
 
 table th {
     background-color: #caf0f8;
-    color: #023e8a;
+    color: #03045e;
     padding: 12px;
     text-align: left;
     font-size: 18px;
@@ -95,40 +84,21 @@ table td {
     font-size: 16px;
 }
 
-/* Advice sections (medicines, precautions, diet) */
 .advice-section {
-    margin-top: 30px;
+    margin-top: 10px; /* reduced from 20px */
 }
 
 .advice-section h3 {
     color: #023e8a;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #90e0ef;
-    padding-bottom: 5px;
+    margin-top: 10px; /* reduced from 20px */
+    margin-bottom: 8px; /* added to separate from content */
 }
 
-.advice-section ul {
-    list-style: disc inside;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.advice-section li {
+.advice-section p {
     background: #e0f7fa;
-    margin-bottom: 10px;
-    padding: 10px 12px;
-    border-left: 4px solid #00b4d8;
-    border-radius: 6px;
-    line-height: 1.5;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-
-    input[type="text"] {
-        width: 100%;
-    }
+    padding: 12px;
+    border-left: 5px solid #00b4d8;
+    border-radius: 8px;
+    line-height: 1.6;
+    margin-top: 0;
 }
