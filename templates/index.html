@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedBot</title>
+</head>
+<body>
+    <h2>Enter Symptoms (comma-separated)</h2>
+    <form method="POST">
+        <input type="text" name="symptoms" required>
+        <button type="submit">Get Advice</button>
+    </form>
+
+    {% if result %}
+        <h3>Response</h3>
+        {% if result.error %}
+            <p style="color: red;">{{ result.error }}</p>
+        {% else %}
+            <h4>Medicines:</h4>
+            <ul>{% for med in result.medicines %}<li>{{ med }}</li>{% endfor %}</ul>
+
+            <h4>Precautions:</h4>
+            <ul>{% for p in result.precautions %}<li>{{ p }}</li>{% endfor %}</ul>
+
+            <h4>Diet Tips:</h4>
+            <ul>{% for d in result.diet %}<li>{{ d }}</li>{% endfor %}</ul>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
